@@ -15,21 +15,22 @@
 </head>
 <body>
 
-    <!-- MOBILE HAMBURGER BUTTON -->
-    <button id="mobile-menu-btn" class="mobile-menu-btn">
+    <!--MOBILE MENU TOGGLE-->
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+    <label for="mobile-menu-toggle" class="mobile-menu-btn">
         <i class="ph ph-list"></i>
-    </button>
+    </label>
 
     <div class="dashboard-container">
         
         <!-- LEFT SIDEBAR -->
-        <aside class="sidebar" id="sidebar">
+        <aside class="sidebar">
             <div class="profile-section">
                 <div class="profile-img-container">
                     <img src="me.jpg" alt="Justin Maylang">
                 </div>
                 <h2>Justin Maylang <i class="ph-fill ph-check-circle verified-badge"></i></h2>
-                <p class="handle">maylangf04@gmail.com</p>
+                <p class="handle">@thefool.cardzero</p>
                 
                 <div class="social-links">
                     <a href="https://github.com/MAYLANG-BIT" target="_blank" title="GitHub"><i class="ph ph-github-logo"></i></a>
@@ -52,7 +53,7 @@
             </div>
         </aside>
 
-        <!-- RIGHT MAIN CONTENT (Scrollable) -->
+        <!-- RIGHT MAIN CONTENT -->
         <main class="main-content">
             
             <!-- HOME PAGE -->
@@ -136,6 +137,7 @@
             <section id="projects" class="page-section">
                 <h2 class="section-title">Featured Builds</h2>
                 <div class="bento-grid">
+                    
                     <article class="bento-card project-card col-span-2 row-span-2">
                         <img src="jaden.jpg" alt="Jaden Puds Web Project" class="bento-img-tall">
                         <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
@@ -223,12 +225,12 @@
                     </article>
                     
                     <article class="bento-card image-card col-span-1">
-                        <img src="craft.jpg" alt="Crafts">
+                        <img src="crafts.jpg" alt="Crafts">
                         <div class="card-overlay"><h4>Handmade Sewing</h4></div>
                     </article>
                     
                     <article class="bento-card image-card col-span-1">
-                        <img src="billiard.jpg" alt="Billiards">
+                        <img src="billiards.jpg" alt="Billiards">
                         <div class="card-overlay"><h4>Billiards Physics</h4></div>
                     </article>
 
@@ -271,25 +273,6 @@
 
         </main>
     </div>
-
-    <!-- JAVASCRIPT FOR MOBILE MENU -->
-    <script>
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const sidebar = document.getElementById('sidebar');
-        const navLinks = document.querySelectorAll('.nav-item');
-
-        // Toggle sidebar open/close when clicking the hamburger icon
-        menuBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        // Automatically close the sidebar when a navigation link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-            });
-        });
-    </script>
 
 </body>
 </html>
