@@ -28,6 +28,33 @@ a {
     color: inherit;
 }
 
+/* PURE CSS MOBILE TOGGLE SYSTEM */
+.mobile-menu-toggle {
+    display: none; /* Hide the actual checkbox forever */
+}
+
+.mobile-menu-btn {
+    display: none; /* Hide the label button on desktop */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 28px;
+    color: var(--text-main);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.mobile-menu-btn:active {
+    transform: scale(0.95);
+}
+
 /* LAYOUT STRUCTURE */
 .dashboard-container {
     display: flex;
@@ -46,6 +73,7 @@ a {
     flex-direction: column;
     padding: 40px 20px;
     flex-shrink: 0;
+    z-index: 999;
 }
 
 .profile-section {
@@ -333,7 +361,7 @@ a {
     100% { transform: translateX(-100%); }
 }
 
-/* BENTO GRID (4-Column Layout) */
+/* BENTO GRID */
 .section-title {
     font-size: 28px;
     margin-bottom: 24px;
@@ -533,7 +561,7 @@ a {
     margin-bottom: 25px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE & PURE CSS MOBILE MENU */
 @media (max-width: 1200px) {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -542,13 +570,65 @@ a {
 }
 
 @media (max-width: 900px) {
-    .dashboard-container { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--card-border); padding: 20px; }
-    .sidebar-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-    .main-content { padding: 0 20px; }
-    .hero-header { flex-direction: column; text-align: center; }
-    .tarot-card-container { transform: rotate(0deg); margin: 0 auto; }
-    .bento-grid { grid-template-columns: 1fr; }
-    .col-span-1, .col-span-2, .col-span-3, .col-span-4 { grid-column: span 1; }
-    .row-span-2 { grid-row: span 1; }
+    /* Reveal the mobile toggle label button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    /* Off-Canvas Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Hides the sidebar off the left edge */
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: rgba(211, 228, 205, 0.98);
+        backdrop-filter: blur(20px);
+        transition: left 0.4s ease;
+        border-right: 1px solid var(--card-border);
+        overflow-y: auto;
+    }
+
+    /* THE CSS MAGIC: When the invisible checkbox is checked, slide the sidebar in */
+    .mobile-menu-toggle:checked ~ .dashboard-container .sidebar {
+        left: 0;
+    }
+
+    
+    .main-content {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+  
+    .page-section {
+        padding-top: 80px; 
+    }
+
+    .hero-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tarot-card-container {
+        transform: rotate(0deg);
+        margin: 0 auto;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .col-span-1, .col-span-2, .col-span-3, .col-span-4 {
+        grid-column: span 1;
+    }
+    
+    .row-span-2 {
+        grid-row: span 1;
+    }
 }
