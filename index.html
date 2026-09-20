@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Maylang | Dashboard Portfolio</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img-container">
+                    <img src="me.jpg" alt="Justin Maylang">
+                </div>
+                <h2>Justin Maylang <i class="ph-fill ph-check-circle verified-badge"></i></h2>
+                <p class="handle">@maylangf04@gmail.com</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/MAYLANG-BIT" target="_blank" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://www.facebook.com/gnalyam" target="_blank" title="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="https://www.instagram.com/yowwjstnnnn___" target="_blank" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="mailto:maylangf04@gmail.com" title="Email"><i class="ph ph-envelope-simple"></i></a>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-item"><i class="ph ph-house"></i> Home</a>
+                <a href="#projects" class="nav-item"><i class="ph ph-folder"></i> Projects</a>
+                <a href="#services" class="nav-item"><i class="ph ph-wrench"></i> Services</a>
+                <a href="#about" class="nav-item"><i class="ph ph-user"></i> About</a>
+                <a href="#contacts" class="nav-item"><i class="ph ph-address-book"></i> Contacts</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>&copy; 2026 Justin D. Maylang.</p>
+            </div>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT (Scrollable) -->
+        <main class="main-content">
+            
+            <!-- HOME PAGE -->
+            <section id="home" class="page-section">
+                <header class="hero-header">
+                    <div class="hero-text-content">
+                        <h1>Educating the mind without educating the heart is no education at all.</h1>
+                        <p>3rd Year Computer Engineering (DYCI) • UI/UX Prototyping • Hardware Technician</p>
+                        <a href="#contacts" class="primary-btn">Get in touch <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="hero-visual-content">
+                        <div class="tarot-card-container">
+                            <div class="tarot-header">
+                                <span class="tarot-title">&spades; THE FOOL</span>
+                                <span class="tarot-subtitle">CARD ZERO</span>
+                            </div>
+                            <img src="tarot.png" alt="The Fool Tarot Card" class="tarot-img">
+                        </div>
+                    </div>
+                </header>
+
+                <!-- TOOLS MARQUEE -->
+                <div class="marquee-container">
+                    <div class="marquee-label">DAILY DRIVERS <br><strong>Tools I work with</strong></div>
+                    <div class="marquee-track">
+                        <div class="marquee-content">
+                            <span><i class="ph ph-code"></i> VS Code</span>
+                            <span><i class="ph ph-image"></i> Adobe Photoshop</span>
+                            <span><i class="ph ph-video-camera"></i> DaVinci Resolve</span>
+                            <span><i class="ph ph-film-strip"></i> Adobe After Effects</span>
+                            <span><i class="ph ph-compass-tool"></i> AutoCAD</span>
+                            <span><i class="ph ph-terminal-window"></i> Claude Code</span>
+                            <span><i class="ph ph-sparkle"></i> Gemini</span>
+                        </div>
+                        <div class="marquee-content" aria-hidden="true">
+                            <span><i class="ph ph-code"></i> VS Code</span>
+                            <span><i class="ph ph-image"></i> Adobe Photoshop</span>
+                            <span><i class="ph ph-video-camera"></i> DaVinci Resolve</span>
+                            <span><i class="ph ph-film-strip"></i> Adobe After Effects</span>
+                            <span><i class="ph ph-compass-tool"></i> AutoCAD</span>
+                            <span><i class="ph ph-terminal-window"></i> Claude Code</span>
+                            <span><i class="ph ph-sparkle"></i> Gemini</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-grid">
+                    <article class="bento-card col-span-2 row-span-2 highlight-card">
+                        <div class="bento-header">
+                            <i class="ph-fill ph-code-block icon-orange"></i>
+                            <h3>SYSTEM ARCHITECTURE</h3>
+                        </div>
+                        <h2 class="card-title-large">Building robust backend ecosystems & IoT platforms.</h2>
+                        <p class="bento-desc mt-auto">Currently integrating AI predictive analytics and IoT sensor networks to solve real-world logistical challenges.</p>
+                    </article>
+
+                    <article class="bento-card col-span-2">
+                        <div class="bento-header">
+                            <i class="ph-fill ph-cpu icon-orange"></i>
+                            <h3>HARDWARE SPECIALIST</h3>
+                        </div>
+                        <p class="bento-desc">Tearing down broken hardware, running logic circuit diagnostics, and assembling custom rigs.</p>
+                    </article>
+
+                    <article class="bento-card status-card">
+                        <i class="ph-fill ph-student icon-orange icon-large"></i>
+                        <h4>DYCI</h4>
+                        <p class="sub-text">BS CpE</p>
+                    </article>
+
+                    <article class="bento-card status-card">
+                        <i class="ph-fill ph-briefcase icon-orange icon-large"></i>
+                        <h4>Freelance</h4>
+                        <p class="sub-text">Available</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PROJECTS PAGE -->
+            <section id="projects" class="page-section">
+                <h2 class="section-title">Featured Builds</h2>
+                <div class="bento-grid">
+                    
+                    <!-- THE HIGHLIGHT PROJECT -->
+                    <article class="bento-card project-card col-span-2 row-span-2">
+                        <img src="jaden.jpg" alt="Jaden Puds Web Project" class="bento-img-tall">
+                        <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
+                            <h3>Jade N Puds Web Platform</h3>
+                            <p>A live, fully responsive web application deployed via Netlify. Showcasing dynamic frontend architecture and clean UI/UX design principles.</p>
+                            <a href="https://jadenpudss.netlify.app/" target="_blank" class="primary-btn outline mt-auto" style="align-self: flex-start; padding: 8px 16px; font-size: 13px; margin-top: 20px;">
+                                View Live Site <i class="ph ph-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- SECONDARY PROJECTS -->
+                    <article class="bento-card project-card col-span-2">
+                        <img src="feature.jpg" alt="Smart Waste System" class="bento-img">
+                        <div class="project-info">
+                            <h3>Smart Waste Collection</h3>
+                            <p>IoT sensors and AI predictive routing designed to optimize waste management logistics.</p>
+                        </div>
+                    </article>
+
+                    <article class="bento-card project-card col-span-1">
+                        <div class="project-info padded-info">
+                            <h3>Frontend UIs</h3>
+                            <p>Developing embedded single-page HTML/CSS layouts.</p>
+                        </div>
+                    </article>
+
+                    <article class="bento-card project-card col-span-1">
+                        <div class="project-info padded-info">
+                            <h3>3D Drafting</h3>
+                            <p>Precise geometric modeling using AutoCAD & AutoLISP.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SERVICES PAGE -->
+            <section id="services" class="page-section">
+                <h2 class="section-title">Core Capabilities</h2>
+                <div class="bento-grid">
+                    <article class="bento-card list-card col-span-2 row-span-2">
+                        <div class="bento-header">
+                            <i class="ph-fill ph-wrench icon-orange"></i>
+                            <h3>HARDWARE & DIAGNOSTICS</h3>
+                        </div>
+                        <p class="bento-desc mb-4">Hands-on technical repair and system optimization.</p>
+                        <ul class="service-list">
+                            <li><span>Laptop & Mobile Device Repair</span> <i class="ph ph-check"></i></li>
+                            <li><span>Custom PC Builds & Maintenance</span> <i class="ph ph-check"></i></li>
+                            <li><span>Motherboard & Component Troubleshooting</span> <i class="ph ph-check"></i></li>
+                            <li><span>Logisim Digital Logic Circuit Wiring</span> <i class="ph ph-check"></i></li>
+                        </ul>
+                    </article>
+
+                    <article class="bento-card list-card col-span-2 row-span-2">
+                        <div class="bento-header">
+                            <i class="ph-fill ph-bezier-curve icon-orange"></i>
+                            <h3>SOFTWARE & DESIGN</h3>
+                        </div>
+                        <p class="bento-desc mb-4">Bridging logic-driven code with engaging visual aesthetics.</p>
+                        <ul class="service-list">
+                            <li><span>Python & SQL Database Scripting</span> <i class="ph ph-check"></i></li>
+                            <li><span>AutoCAD 3D Modeling & Drafting</span> <i class="ph ph-check"></i></li>
+                            <li><span>Graphic Design & Brand Identity</span> <i class="ph ph-check"></i></li>
+                            <li><span>After Effects / DaVinci Video Editing</span> <i class="ph ph-check"></i></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ABOUT PAGE -->
+            <section id="about" class="page-section">
+                <h2 class="section-title">The Jack of All Trades</h2>
+                <div class="bento-grid">
+                    <article class="bento-card col-span-4 text-heavy-card">
+                        <div class="bento-header">
+                            <i class="ph-fill ph-brain icon-orange"></i>
+                            <h3>THE ENGINE OF CURIOSITY</h3>
+                        </div>
+                        <p>I was diagnosed with ADHD, something I view not as a barrier, but as the engine behind my endless drive to learn. It fuels a unique kind of focus, pushing me to dive deep into completely different disciplines until I understand them from the inside out. Whether I am drafting mechanical parts, repairing motherboards, or writing poetry, I am always chasing the perfect balance of discipline and flow.</p>
+                    </article>
+                    
+                    <article class="bento-card image-card col-span-1">
+                        <img src="music.jpg" alt="Music">
+                        <div class="card-overlay"><h4>Songwriting</h4></div>
+                    </article>
+                    
+                    <article class="bento-card image-card col-span-1">
+                        <img src="craft.jpg" alt="Crafts">
+                        <div class="card-overlay"><h4>Handmade Sewing</h4></div>
+                    </article>
+                    
+                    <article class="bento-card image-card col-span-1">
+                        <img src="billiard.jpg" alt="Billiards">
+                        <div class="card-overlay"><h4>Billiards Physics</h4></div>
+                    </article>
+
+                    <article class="bento-card image-card col-span-1">
+                        <div class="gradient-bg-card">
+                            <i class="ph-fill ph-barbell icon-orange icon-large"></i>
+                            <h4>PPL & Basketball</h4>
+                            <p>Pushing physical limits.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONTACTS PAGE -->
+            <section id="contacts" class="page-section">
+                <h2 class="section-title">Let's Build Something</h2>
+                <div class="bento-grid">
+                    <article class="bento-card contact-card col-span-2">
+                        <i class="ph-fill ph-paper-plane-tilt icon-large"></i>
+                        <h3>Project Inquiries</h3>
+                        <p>Available for tech repairs, builds, and design.</p>
+                        <a href="mailto:maylangf04@gmail.com" class="primary-btn outline mt-auto">Email Me</a>
+                    </article>
+
+                    <article class="bento-card contact-card col-span-1">
+                        <i class="ph-fill ph-github-logo icon-large"></i>
+                        <h3>Code & Repos</h3>
+                        <p>View my commits.</p>
+                        <a href="https://github.com/MAYLANG-BIT" target="_blank" class="primary-btn outline mt-auto">GitHub</a>
+                    </article>
+
+                    <article class="bento-card contact-card col-span-1">
+                        <i class="ph-fill ph-file-pdf icon-large"></i>
+                        <h3>Resume</h3>
+                        <p>Academic history.</p>
+                        <a href="maylangf04@gmail.com.pdf" target="_blank" class="primary-btn outline mt-auto">Download</a>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
