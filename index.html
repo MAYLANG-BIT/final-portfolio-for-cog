@@ -15,16 +15,21 @@
 </head>
 <body>
 
+    <!-- MOBILE HAMBURGER BUTTON -->
+    <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <i class="ph ph-list"></i>
+    </button>
+
     <div class="dashboard-container">
         
         <!-- LEFT SIDEBAR -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="profile-section">
                 <div class="profile-img-container">
                     <img src="me.jpg" alt="Justin Maylang">
                 </div>
                 <h2>Justin Maylang <i class="ph-fill ph-check-circle verified-badge"></i></h2>
-                <p class="handle">@maylangf04@gmail.com</p>
+                <p class="handle">maylangf04@gmail.com</p>
                 
                 <div class="social-links">
                     <a href="https://github.com/MAYLANG-BIT" target="_blank" title="GitHub"><i class="ph ph-github-logo"></i></a>
@@ -131,12 +136,10 @@
             <section id="projects" class="page-section">
                 <h2 class="section-title">Featured Builds</h2>
                 <div class="bento-grid">
-                    
-                    <!-- THE HIGHLIGHT PROJECT -->
                     <article class="bento-card project-card col-span-2 row-span-2">
                         <img src="jaden.jpg" alt="Jaden Puds Web Project" class="bento-img-tall">
                         <div class="project-info" style="display: flex; flex-direction: column; height: 100%;">
-                            <h3>Jade N Puds Web Platform</h3>
+                            <h3>Jaden Puds Web Platform</h3>
                             <p>A live, fully responsive web application deployed via Netlify. Showcasing dynamic frontend architecture and clean UI/UX design principles.</p>
                             <a href="https://jadenpudss.netlify.app/" target="_blank" class="primary-btn outline mt-auto" style="align-self: flex-start; padding: 8px 16px; font-size: 13px; margin-top: 20px;">
                                 View Live Site <i class="ph ph-arrow-up-right"></i>
@@ -144,7 +147,6 @@
                         </div>
                     </article>
 
-                    <!-- SECONDARY PROJECTS -->
                     <article class="bento-card project-card col-span-2">
                         <img src="feature.jpg" alt="Smart Waste System" class="bento-img">
                         <div class="project-info">
@@ -269,6 +271,25 @@
 
         </main>
     </div>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        const navLinks = document.querySelectorAll('.nav-item');
+
+        // Toggle sidebar open/close when clicking the hamburger icon
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Automatically close the sidebar when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
