@@ -253,25 +253,23 @@
                         <h3>Project Inquiries</h3>
                         <p>Available for tech repairs, builds, and design.</p>
                         <form name="project-contract" method="POST" data-netlify="true" class="contract-form">
-  <div class="form-group">
-    <label for="client-name">Name</label>
-    <input type="text" id="client-name" name="name" required placeholder="Your Name">
-  </div>
-
-  <div class="form-group">
-    <label for="client-email">Email</label>
-    <input type="email" id="client-email" name="email" required placeholder="your.email@example.com">
-  </div>
-
-  <div class="form-group">
-    <label for="service-type">Service Required</label>
-    <select id="service-type" name="service" required>
-      <option value="">Select a service...</option>
-      <option value="PC Build">Custom PC Build</option>
-      <option value="Hardware Repair">Smartphone / Laptop Repair</option>
-      <option value="3D CAD">3D CAD Modeling</option>
-      <option value="Graphic Design">Digital Graphic Design</option>
-      <option value="Other">Other</option>
+  <input type="text" name="name" required placeholder="Your Name">
+  
+  <input type="email" name="email" required placeholder="your.email@example.com">
+  
+  <select name="service" required>
+    <option value="" disabled selected>Select a service...</option>
+    <option value="PC Build">Custom PC Build</option>
+    <option value="Hardware Repair">Smartphone / Laptop Repair</option>
+    <option value="3D CAD">3D CAD Modeling</option>
+    <option value="Graphic Design">Digital Graphic Design</option>
+    <option value="Other">Other</option>
+  </select>
+  
+  <textarea name="details" rows="3" required placeholder="Describe the project or budget..."></textarea>
+  
+  <button type="submit" class="primary-btn outline">Send Inquiry</button>
+</form>
     </select>
   </div>
 
